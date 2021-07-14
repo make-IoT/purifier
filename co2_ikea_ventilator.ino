@@ -202,6 +202,10 @@ void TestIAQ()
         pixels.show();
         Serial.print("Stufe3");
         Serial.println();
+        pixels.setPixelColor(1,40,0,0,0);
+        pixels.show();
+        Serial.print("Alarm: Querlueften!");
+        Serial.println();
       }
     }
   }
