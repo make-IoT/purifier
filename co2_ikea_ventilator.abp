@@ -6,8 +6,8 @@
 <Block genus-name="subroutine" id="794">
 <Label>TestIAQ</Label>
 <Location>
-<X>860</X>
-<Y>44</Y>
+<X>846</X>
+<Y>7</Y>
 </Location>
 <Sockets num-sockets="1">
 <BlockConnector con-block-id="796" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Befehle" position-type="single"/>
@@ -15,8 +15,8 @@
 </Block>
 <Block genus-name="ifelse" id="796">
 <Location>
-<X>979</X>
-<Y>52</Y>
+<X>965</X>
+<Y>15</Y>
 </Location>
 <BeforeBlockId>794</BeforeBlockId>
 <Sockets num-sockets="3">
@@ -28,8 +28,8 @@
 <Block genus-name="iot_neopixel_light" id="797">
 <Label>Neopixel</Label>
 <Location>
-<X>1113</X>
-<Y>733</Y>
+<X>1099</X>
+<Y>804</Y>
 </Location>
 <BeforeBlockId>796</BeforeBlockId>
 <AfterBlockId>800</AfterBlockId>
@@ -41,8 +41,8 @@
 <Block genus-name="serial_print" id="800">
 <Label>Serial print</Label>
 <Location>
-<X>1113</X>
-<Y>787</Y>
+<X>1099</X>
+<Y>858</Y>
 </Location>
 <BeforeBlockId>797</BeforeBlockId>
 <Sockets num-sockets="2">
@@ -53,8 +53,8 @@
 <Block genus-name="true" id="802">
 <Label>true</Label>
 <Location>
-<X>1287</X>
-<Y>814</Y>
+<X>1273</X>
+<Y>885</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="800" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
@@ -63,8 +63,8 @@
 <Block genus-name="message" id="801">
 <Label>IAQ not ready!</Label>
 <Location>
-<X>1287</X>
-<Y>790</Y>
+<X>1273</X>
+<Y>861</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="800" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
@@ -75,8 +75,8 @@
 </Block>
 <Block genus-name="NEOVectorBlue" id="799">
 <Location>
-<X>1243</X>
-<Y>760</Y>
+<X>1229</X>
+<Y>831</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="797" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
@@ -85,8 +85,8 @@
 <Block genus-name="neo-rechts" id="798">
 <Label>Rechts</Label>
 <Location>
-<X>1243</X>
-<Y>736</Y>
+<X>1229</X>
+<Y>807</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="797" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
@@ -94,8 +94,8 @@
 </Block>
 <Block genus-name="ifelse" id="467">
 <Location>
-<X>1114</X>
-<Y>105</Y>
+<X>1100</X>
+<Y>68</Y>
 </Location>
 <BeforeBlockId>796</BeforeBlockId>
 <Sockets num-sockets="3">
@@ -107,8 +107,8 @@
 <Block genus-name="ifelse" id="475">
 <Label>Falls/sonst</Label>
 <Location>
-<X>1248</X>
-<Y>320</Y>
+<X>1234</X>
+<Y>283</Y>
 </Location>
 <BeforeBlockId>467</BeforeBlockId>
 <Sockets num-sockets="3">
@@ -119,8 +119,8 @@
 </Block>
 <Block genus-name="code" id="479">
 <Location>
-<X>1382</X>
-<Y>535</Y>
+<X>1368</X>
+<Y>498</Y>
 </Location>
 <BeforeBlockId>475</BeforeBlockId>
 <AfterBlockId>481</AfterBlockId>
@@ -130,8 +130,8 @@
 </Block>
 <Block genus-name="code" id="481">
 <Location>
-<X>1382</X>
-<Y>565</Y>
+<X>1368</X>
+<Y>528</Y>
 </Location>
 <BeforeBlockId>479</BeforeBlockId>
 <AfterBlockId>508</AfterBlockId>
@@ -141,8 +141,8 @@
 </Block>
 <Block genus-name="iot_neopixel_light" id="508">
 <Location>
-<X>1382</X>
-<Y>595</Y>
+<X>1368</X>
+<Y>558</Y>
 </Location>
 <BeforeBlockId>481</BeforeBlockId>
 <AfterBlockId>499</AfterBlockId>
@@ -154,20 +154,100 @@
 <Block genus-name="serial_print" id="499">
 <Label>Serial print</Label>
 <Location>
-<X>1382</X>
-<Y>649</Y>
+<X>1368</X>
+<Y>612</Y>
 </Location>
 <BeforeBlockId>508</BeforeBlockId>
+<AfterBlockId>803</AfterBlockId>
 <Sockets num-sockets="2">
 <BlockConnector con-block-id="500" connector-kind="socket" connector-type="string" init-type="string" label="Text" position-type="single"/>
 <BlockConnector con-block-id="501" connector-kind="socket" connector-type="boolean" init-type="boolean" label="neue Zeile" position-type="single"/>
 </Sockets>
 </Block>
+<Block genus-name="iot_neopixel_light" id="803">
+<Label>Neopixel</Label>
+<Location>
+<X>1368</X>
+<Y>666</Y>
+</Location>
+<Comment>
+<Text>IAQ &gt; 150 Luftreiniger alleine reicht nicht mehr, frische Luft zuführen!</Text>
+<Location>
+<X>1528</X>
+<Y>790</Y>
+</Location>
+<BoxSize>
+<Width>181</Width>
+<Height>118</Height>
+</BoxSize>
+</Comment>
+<BeforeBlockId>499</BeforeBlockId>
+<AfterBlockId>806</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="804" connector-kind="socket" connector-type="number" init-type="number" label="Ort" position-type="single"/>
+<BlockConnector con-block-id="805" connector-kind="socket" connector-type="boolean" init-type="boolean" label="Farbe" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="serial_print" id="806">
+<Label>Serial print</Label>
+<Location>
+<X>1368</X>
+<Y>720</Y>
+</Location>
+<BeforeBlockId>803</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="807" connector-kind="socket" connector-type="string" init-type="string" label="Text" position-type="single"/>
+<BlockConnector con-block-id="808" connector-kind="socket" connector-type="boolean" init-type="boolean" label="neue Zeile" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="true" id="808">
+<Label>true</Label>
+<Location>
+<X>1542</X>
+<Y>747</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="806" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="message" id="807">
+<Label>Alarm: Querlueften!</Label>
+<Location>
+<X>1542</X>
+<Y>723</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="806" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="NEOVectorRed" id="805">
+<Label>Rot</Label>
+<Location>
+<X>1498</X>
+<Y>693</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="803" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="neo-links" id="804">
+<Label>Links</Label>
+<Location>
+<X>1498</X>
+<Y>669</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="803" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+</Block>
 <Block genus-name="true" id="501">
 <Label>true</Label>
 <Location>
-<X>1556</X>
-<Y>676</Y>
+<X>1542</X>
+<Y>639</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="499" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
@@ -176,8 +256,8 @@
 <Block genus-name="message" id="500">
 <Label>Stufe3</Label>
 <Location>
-<X>1556</X>
-<Y>652</Y>
+<X>1542</X>
+<Y>615</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="499" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
@@ -189,8 +269,8 @@
 <Block genus-name="NEOVectorRed" id="510">
 <Label>Rot</Label>
 <Location>
-<X>1512</X>
-<Y>622</Y>
+<X>1498</X>
+<Y>585</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="508" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
@@ -198,8 +278,8 @@
 </Block>
 <Block genus-name="neo-rechts" id="509">
 <Location>
-<X>1512</X>
-<Y>598</Y>
+<X>1498</X>
+<Y>561</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="508" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
@@ -208,8 +288,8 @@
 <Block genus-name="text" id="482">
 <Label>analogWrite(15 , 100);</Label>
 <Location>
-<X>1444</X>
-<Y>568</Y>
+<X>1430</X>
+<Y>531</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="481" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
@@ -218,8 +298,8 @@
 <Block genus-name="text" id="480">
 <Label>analogWriteFreq(300);</Label>
 <Location>
-<X>1444</X>
-<Y>538</Y>
+<X>1430</X>
+<Y>501</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="479" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
@@ -227,8 +307,8 @@
 </Block>
 <Block genus-name="code" id="483">
 <Location>
-<X>1383</X>
-<Y>356</Y>
+<X>1369</X>
+<Y>319</Y>
 </Location>
 <BeforeBlockId>475</BeforeBlockId>
 <AfterBlockId>485</AfterBlockId>
@@ -238,8 +318,8 @@
 </Block>
 <Block genus-name="code" id="485">
 <Location>
-<X>1383</X>
-<Y>386</Y>
+<X>1369</X>
+<Y>349</Y>
 </Location>
 <BeforeBlockId>483</BeforeBlockId>
 <AfterBlockId>505</AfterBlockId>
@@ -249,8 +329,8 @@
 </Block>
 <Block genus-name="iot_neopixel_light" id="505">
 <Location>
-<X>1383</X>
-<Y>416</Y>
+<X>1369</X>
+<Y>379</Y>
 </Location>
 <BeforeBlockId>485</BeforeBlockId>
 <AfterBlockId>496</AfterBlockId>
@@ -262,8 +342,8 @@
 <Block genus-name="serial_print" id="496">
 <Label>Serial print</Label>
 <Location>
-<X>1383</X>
-<Y>470</Y>
+<X>1369</X>
+<Y>433</Y>
 </Location>
 <BeforeBlockId>505</BeforeBlockId>
 <Sockets num-sockets="2">
@@ -274,8 +354,8 @@
 <Block genus-name="true" id="498">
 <Label>true</Label>
 <Location>
-<X>1557</X>
-<Y>497</Y>
+<X>1543</X>
+<Y>460</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="496" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
@@ -284,8 +364,8 @@
 <Block genus-name="message" id="497">
 <Label>Stufe2</Label>
 <Location>
-<X>1557</X>
-<Y>473</Y>
+<X>1543</X>
+<Y>436</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="496" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
@@ -296,8 +376,8 @@
 </Block>
 <Block genus-name="NEOVectorYellow" id="507">
 <Location>
-<X>1513</X>
-<Y>443</Y>
+<X>1499</X>
+<Y>406</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="505" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
@@ -305,8 +385,8 @@
 </Block>
 <Block genus-name="neo-rechts" id="506">
 <Location>
-<X>1513</X>
-<Y>419</Y>
+<X>1499</X>
+<Y>382</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="505" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
@@ -315,8 +395,8 @@
 <Block genus-name="text" id="486">
 <Label>analogWrite(15 , 100);</Label>
 <Location>
-<X>1445</X>
-<Y>389</Y>
+<X>1431</X>
+<Y>352</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="485" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
@@ -325,8 +405,8 @@
 <Block genus-name="text" id="484">
 <Label>analogWriteFreq(220);</Label>
 <Location>
-<X>1445</X>
-<Y>359</Y>
+<X>1431</X>
+<Y>322</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="483" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
@@ -334,8 +414,8 @@
 </Block>
 <Block genus-name="less_equal" id="476">
 <Location>
-<X>1386</X>
-<Y>323</Y>
+<X>1372</X>
+<Y>286</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="475" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
@@ -348,8 +428,8 @@
 <Block genus-name="number" id="478">
 <Label>150</Label>
 <Location>
-<X>1496</X>
-<Y>326</Y>
+<X>1482</X>
+<Y>289</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="476" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
@@ -358,8 +438,8 @@
 <Block genus-name="variable_number" id="787">
 <Label>IAQ</Label>
 <Location>
-<X>1396</X>
-<Y>326</Y>
+<X>1382</X>
+<Y>289</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="476" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
@@ -367,8 +447,8 @@
 </Block>
 <Block genus-name="code" id="471">
 <Location>
-<X>1249</X>
-<Y>141</Y>
+<X>1235</X>
+<Y>104</Y>
 </Location>
 <BeforeBlockId>467</BeforeBlockId>
 <AfterBlockId>473</AfterBlockId>
@@ -378,8 +458,8 @@
 </Block>
 <Block genus-name="code" id="473">
 <Location>
-<X>1249</X>
-<Y>171</Y>
+<X>1235</X>
+<Y>134</Y>
 </Location>
 <BeforeBlockId>471</BeforeBlockId>
 <AfterBlockId>502</AfterBlockId>
@@ -389,8 +469,8 @@
 </Block>
 <Block genus-name="iot_neopixel_light" id="502">
 <Location>
-<X>1249</X>
-<Y>201</Y>
+<X>1235</X>
+<Y>164</Y>
 </Location>
 <BeforeBlockId>473</BeforeBlockId>
 <AfterBlockId>493</AfterBlockId>
@@ -401,8 +481,8 @@
 </Block>
 <Block genus-name="serial_print" id="493">
 <Location>
-<X>1249</X>
-<Y>255</Y>
+<X>1235</X>
+<Y>218</Y>
 </Location>
 <BeforeBlockId>502</BeforeBlockId>
 <Sockets num-sockets="2">
@@ -413,8 +493,8 @@
 <Block genus-name="true" id="495">
 <Label>true</Label>
 <Location>
-<X>1423</X>
-<Y>282</Y>
+<X>1409</X>
+<Y>245</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="493" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
@@ -423,8 +503,8 @@
 <Block genus-name="message" id="494">
 <Label>Stufe1</Label>
 <Location>
-<X>1423</X>
-<Y>258</Y>
+<X>1409</X>
+<Y>221</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="493" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
@@ -435,8 +515,8 @@
 </Block>
 <Block genus-name="NEOVectorGreen" id="504">
 <Location>
-<X>1379</X>
-<Y>228</Y>
+<X>1365</X>
+<Y>191</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="502" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
@@ -444,8 +524,8 @@
 </Block>
 <Block genus-name="neo-rechts" id="503">
 <Location>
-<X>1379</X>
-<Y>204</Y>
+<X>1365</X>
+<Y>167</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="502" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
@@ -454,8 +534,8 @@
 <Block genus-name="text" id="474">
 <Label>analogWrite(15 , 100);</Label>
 <Location>
-<X>1311</X>
-<Y>174</Y>
+<X>1297</X>
+<Y>137</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="473" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
@@ -464,8 +544,8 @@
 <Block genus-name="text" id="472">
 <Label>analogWriteFreq(100);</Label>
 <Location>
-<X>1311</X>
-<Y>144</Y>
+<X>1297</X>
+<Y>107</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="471" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
@@ -473,8 +553,8 @@
 </Block>
 <Block genus-name="less_equal" id="468">
 <Location>
-<X>1252</X>
-<Y>108</Y>
+<X>1238</X>
+<Y>71</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="467" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
@@ -487,8 +567,8 @@
 <Block genus-name="number" id="470">
 <Label>100</Label>
 <Location>
-<X>1362</X>
-<Y>111</Y>
+<X>1348</X>
+<Y>74</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="468" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
@@ -497,8 +577,8 @@
 <Block genus-name="variable_number" id="786">
 <Label>IAQ</Label>
 <Location>
-<X>1262</X>
-<Y>111</Y>
+<X>1248</X>
+<Y>74</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="468" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
@@ -506,14 +586,14 @@
 </Block>
 <Block genus-name="greater_equal" id="790">
 <Location>
-<X>1117</X>
-<Y>55</Y>
+<X>1103</X>
+<Y>18</Y>
 </Location>
 <Comment>
 <Text>Prüfe ob IAQ Wert stabil, wenn IAQ Accuracy &gt;=1 kann die Regelung starten, ca 3 min nach Programmstart</Text>
 <Location>
-<X>1566</X>
-<Y>90</Y>
+<X>1559</X>
+<Y>96</Y>
 </Location>
 <BoxSize>
 <Width>158</Width>
@@ -531,8 +611,8 @@
 <Block genus-name="number" id="793">
 <Label>1</Label>
 <Location>
-<X>1501</X>
-<Y>58</Y>
+<X>1487</X>
+<Y>21</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="790" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
@@ -540,8 +620,8 @@
 </Block>
 <Block genus-name="GetBSEC" id="791">
 <Location>
-<X>1127</X>
-<Y>58</Y>
+<X>1113</X>
+<Y>21</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="790" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
@@ -552,8 +632,8 @@
 </Block>
 <Block genus-name="BSECVectorIAQAccuracy" id="792">
 <Location>
-<X>1319</X>
-<Y>58</Y>
+<X>1305</X>
+<Y>21</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="791" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
